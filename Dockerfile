@@ -1,5 +1,9 @@
 FROM ruby:2.4
 
+RUN apt-get install curl
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
+RUN apt-get install -y nodejs
+
 WORKDIR /app
 
 COPY Gemfile ./
