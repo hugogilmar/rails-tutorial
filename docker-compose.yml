@@ -11,6 +11,8 @@ services:
       dockerfile: Dockerfile
     tty: true
     stdin_open: true
+    ports:
+      - '3000:3000'
     volumes:
       - '.:/app:delegated'
       - '~/.ssh:/root/.ssh:delegated'
